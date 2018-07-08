@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>奇技淫巧-border</title>
+        <style>
+            .border-equal-height {
+                text-align: center;
+                border-left: 150px solid #666;
+                background-color: aliceblue;
+            }
+            .border-equal-height > nav {
+                width: 150px;
+                margin-left: -150px;
+                float: left;
+            }
+            .border-equal-height > section {
+                overflow: hidden;
+            }
+            .border-equal-height:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .nav-item {
+                color: white;
+                padding: 4px 0;
+                border-bottom: 1px solid aliceblue;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>border 等高技术</h2>
+        <div class="sample">
+            <div class="border-equal-height">
+                <nav>
+                    <div class="nav-item">导航1</div>
+                    <div class="nav-item">导航2</div>
+                </nav>
+                <section>模块1</section>
+            </div>
+        </div>
+    </body>
+</html>

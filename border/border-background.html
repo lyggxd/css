@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>奇技淫巧-border</title>
+        <link rel="stylesheet" type="text/css" href="../style/util.css" />
+        <style>
+            .border-background {
+                display: inline-block;
+                width: 200px;
+                height: 200px;
+                background: url(../img/matou.jpeg) no-repeat;
+                background-size: 100px 120px;
+                border-right: 50px solid transparent;
+                background-position: 100% 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>右下方 background 定位的技巧</h2>
+        <div class="sample">
+            <div class="border-background"></div>
+        </div>
+        <code><pre>
+.border-background {
+    border-right: 50px solid transparent;
+    background-position: 100% 50%;
+}</pre></code>
+    </body>
+</html>

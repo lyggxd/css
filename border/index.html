@@ -1,0 +1,214 @@
+<html>
+    <title>border</title>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../style/util.css" />
+        <style>
+            i { display: inline-block; padding: 5px; vertical-align: middle; border: 4px solid royalblue; font-style: normal; }
+            .thin { border-width: thin 1px; }
+            .medium { border-width: medium 3px; }
+            .thick { border-width: thick 5px; }
+            .none { border-style: none; }
+            .solid { border-style: solid; }
+            .dashed { border-style: dashed; }
+            .dotted { border-style: dotted; }
+            .border-10px { border: 10px; }
+            .border-red { border: red; }
+            .border-solid { border: solid; }
+            .double { border-style: double; min-width: 100px }
+            .double-1 { border-width: 1px 0 0 0; }
+            .double-2 { border-width: 2px 0 0 0; }
+            .double-3 { border-width: 3px 0 0 0; }
+            .double-4 { border-width: 4px 0 0 0; }
+            .double-5 { border-width: 5px 0 0 0; }
+            .double-6 { border-width: 6px 0 0 0; }
+            .double-7 { border-width: 7px 0 0 0; }
+            .border-color {
+                border: 10px solid;
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>类似属性</h3>
+        <ul>
+            <li>outline</li>
+            <li>box-shadow</li>
+            <li>text-shadow</li>
+        </ul>
+        <h3>border-width</h3>
+        <ul>
+            <li>thin = 1px</li>
+            <i class="thin">
+                <code>.thin { border-width: thin 1px; }</code>
+            </i>
+            <li>medium = 3px</li>
+            <i class="medium">
+                <code>.medium { border-width: medium 3px; }</code>
+            </i>
+            <li>thick = 5px（此处书中写的是4px）</li>
+            <i class="thick">
+                <code>.thick { border-width: thick 5px; }</code>
+            </i>
+        </ul>
+        <h3>border-style</h3>
+        <ul>
+            <li>none(default)</li>
+            <i class="none">
+                <code>.none { border-style: none; }</code>
+            </i>
+            <li>solid</li>
+            <i class="solid">
+                <code>.solid { border-style: solid; }</code>
+            </i>
+            <li>dashed</li>
+            <i class="dashed">
+                <code>.dashed { border-style: dashed; }</code>
+            </i>
+            <li>dotted</li>
+            <i class="dotted">
+                <code>.dotted { border-style: dotted; }</code>
+            </i>
+            <li>double</li>
+            <i class="double">
+                <code>.double { border-style: double; }</code>
+            </i>
+            <table>
+                <thead>
+                    <tr>
+                        <th>值</th>
+                        <th>双边边框表现规则</th>
+                        <th>效果预览</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1px</td>
+                        <td>0+1+0</td>
+                        <td><i class="double double-1"></i></td>
+                    </tr>
+                    <tr>
+                        <td>2px</td>
+                        <td>1+0+1</td>
+                        <td><i class="double double-2"></i></td>
+                    </tr>
+                    <tr>
+                        <td>3px</td>
+                        <td>1+1+1</td>
+                        <td><i class="double double-3"></i></td>
+                    </tr>
+                    <tr>
+                        <td>4px</td>
+                        <td>1+2+1</td>
+                        <td><i class="double double-4"></i></td>
+                    </tr>
+                    <tr>
+                        <td>5px</td>
+                        <td>2+1+2</td>
+                        <td><i class="double double-5"></i></td>
+                    </tr>
+                    <tr>
+                        <td>6px</td>
+                        <td>2+2+2</td>
+                        <td><i class="double double-6"></i></td>
+                    </tr>
+                    <tr>
+                        <td>7px</td>
+                        <td>2+3+2</td>
+                        <td><i class="double double-7"></i></td>
+                    </tr>
+                    <!-- <tr>
+                        <td>1px</td>
+                        <td>0+1+0</td>
+                        <td><i class="double double-1"></i></td>
+                    </tr> -->
+                </tbody>
+            </table>
+            <li>其他：inset、outset、groove、ridge</li>
+        </ul>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Chrome/Firefox</th>
+                    <th>IE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>dashed颜色区宽高比</th>
+                    <td>3:1</td>
+                    <td>2:1</td>
+                </tr>
+                <tr>
+                    <th>dashed颜色区与透明区比</th>
+                    <td>1:1<b style="color: red">?</b></td>
+                    <td>2:1</td>
+                </tr>
+                <tr>
+                    <th>dotted</th>
+                    <td>小方点<b style="color: red">?</b></td>
+                    <td>小圆点</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>border-color</h3>
+        <blockquote><code>border-color</code>默认颜色就是<code>color</code>色值</blockquote>
+        <i class="border-color"><code><pre>
+.border-color {
+    border: 10px solid;
+    color: red;
+}</pre></code></i>
+        <h3>其他比较</h3>
+        <ul>
+            <li>设置 border-width</li>
+            <i class="border-10px"><code>.border-10px { border: 10px; }</code></i>
+            <li>设置 border-color</li>
+            <i class="border-red"><code>.border-red { border: red; }</code></i>
+            <li>设置 border-style</li>
+            <i class="border-solid"><code>.border-solid { border: solid; }</code></i>
+        </ul>
+        <h3>奇技淫巧</h3>
+        <ul>
+            <li>
+                不用 border-radius 实现一个圆 / 在 IE8 中实现圆角
+                <a href="./dotted-circle.html">示例</a>
+            </li>
+            <li>
+                用一个元素实现“三道杠”
+                <a href="./three-tripples.html">示例</a>
+            </li>
+            <li>
+                更简单的 hover 变色
+                <a href="./hover-color.html">示例</a>
+            </li>
+            <li>
+                透明边框技巧
+                <ul>
+                    <li>
+                        右下方 background 定位的技巧
+                        <a href="./border-background.html">示例</a>
+                    </li>
+                    <div>CSS3 到来之后，这个技巧就没啥用了</div>
+                    <div>background-position 的位置计算默认是不会把 border-width 计算在内的</div>
+                    <li>
+                        优雅地增加点击区域的大小
+                        <a href="./border-input.html">示例</a>
+                    </li>
+                    <div>tip：想要修改 input 的高度，关键是要设置 border</div>
+                </ul>
+            </li>
+            <li>
+                绘制三角
+                <a href="./triangle.html">示例</a>
+            </li>
+            <li>
+                border 实现圆角效果
+                <a href="./fake-radius.html">示例</a>
+            </li>
+            <li>
+                border 等高技术
+                <a href="./equal-height.html">示例</a>
+            </li>
+        </ul>
+    </body>
+</html>

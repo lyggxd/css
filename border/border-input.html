@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="../style/util.css" />
+        <style>
+            input[type="text"] {
+                
+                width: 200px;
+                height: 40px;
+                padding: 10px 40px 10px 10px;
+                border: 1px solid #ccc;
+                font-size: 16px;
+                box-sizing: border-box;
+            }
+            .icon-clear {
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                line-height: 14px;
+                margin: 1px 0 0 -38px;
+                text-align: center;
+                border: 11px solid transparent;
+                border-radius: 50%;
+                background-color: #999;
+                background-clip: padding-box;
+                color: white;
+                user-select: none;
+                cursor: pointer;
+                visibility: hidden;
+            }
+            input:valid + .icon-clear {
+                visibility: visible;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>优雅地增加点击区域的大小</h2>
+        <div class="sample">
+            <div>
+                <input type="text" name="border-input"><label for="border-input" class="icon-clear">x</label>
+            </div>
+        </div>
+        <code><pre>
+input[type="text"] {
+    width: 200px;
+    height: 40px;
+    padding: 10px 40px 10px 10px;
+    border: 1px solid #ccc;
+}
+.icon-clear {
+    width: 16px;
+    height: 16px;
+    ...
+    border: 11px solid transparent;
+    background-color: #999;
+    background-clip: padding-box;
+}</pre></code>
+    </body>
+</html>
