@@ -1,0 +1,71 @@
+<html>
+    <title>position</title>
+    <style>
+        html {
+            background-color: white;
+        }
+        body {
+            background-color: teal;
+        }
+        .width-half {
+            width: 50%;
+        }
+        .wrapper {
+            height: 300px;
+            position: relative;
+            background-color: whitesmoke;
+            margin: 8px;
+        }
+        .static {
+            background-color: blanchedalmond;
+        }
+        .relative {
+            position: relative;
+            background-color: grey;
+        }
+        .absolute {
+            position: absolute;
+            background-color: cornflowerblue;
+            bottom: 0;
+            right: 0;
+        }
+        .fixed {
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: lightpink;
+        }
+        .inline-demo {
+            display: inline-block;
+        }
+        .inline {
+            position: relative;
+            padding-right: 150px;
+        }
+        .inline-absolute {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        big {
+            font-size: 30px;
+        }
+    </style>
+    <body>
+        <div class="wrapper">
+            <div class="static width-half">position: static; width: 50%;</div>
+            <div class="relative width-half">position: relative; width: 50%;</div>
+            <div class="absolute width-half">position: absolute; width: 50%;</div>
+            <div class="fixed width-half">position: fixed; width: 50%;</div>
+        </div>
+        <div class="wrapper">
+            <div class="inline-demo">
+                <span class="inline">
+                    position: inline，
+                    我包含一个<div class="absolute inline-absolute">position: absolute</div>盒子，我还包含2个<big>很大</big>的文字
+                </span>
+            </div>
+            <div class="absolute absolute-newline">我来测试一下会不会换行我来测试一下会不会换行我来测试一下会不会换行我来测试一下会不会换行我来测试一下会不会换行我来测试一下会不会换行</div>
+        </div>
+    </body>
+</html>

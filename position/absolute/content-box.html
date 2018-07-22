@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>position</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../style/util.css" />
+    <style>
+        .container {
+            border: solid gainsboro;
+            border-width: 1px 0;
+        }
+        .container h4 {
+            margin-top: 0;
+        }
+        .fake-padding {
+            position: relative;
+            border: 20px solid transparent;
+        }
+        .tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: cadetblue;
+            padding: 0 8px;
+            font-style: normal;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <h3>相对于 content box 定位</h3>
+    <div class="container">
+        <div class="fake-padding">
+            <h4>标题</h4>
+            <div>这是一段描述，纯粹为了凑字数填补空白，不用太在意，请关注右上角的标签。</div>
+            <i class="tag">标签</i>
+        </div>
+    </div>
+    <code><pre>.fake-padding {
+    position: relative;
+    border: 20px solid transparent;
+}
+.tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+    </pre></code>
+</body>
+</html>
